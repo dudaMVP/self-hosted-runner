@@ -1,0 +1,12 @@
+name: Self-Hosted Runner Test
+
+on:
+  workflow_dispatch:   # lets you trigger manually
+
+jobs:
+  run-script:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run hello.sh
+        run: ./hello.sh
